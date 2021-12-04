@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+ <style>
+
+
+ </style>
+
+
+
+
+
+
+
+
+  <script>
+
+function myfunction() {
+
+
+
+
+
+
+  var textVal = document.getElementById("textarea1").value;
+
+   if(textVal=='')
+{
+
+    document.getElementById("errorMessage").innerHTML = "Feedback area cannot be blank......";
+ }
+
+   else{
+    window.location.href ='dot.html';
+   }
+
+
+
+}
+
+function RedirectToPage(targetpage)
+{
+
+  window.location.href = targetpage
+
+}
+
+</script>
+  <meta charset="utf-8">
+</head>
+
+<body style="background-color:lightblue">
+  <h2>Varad Infotech</h2>
+  <button style="color:yellow;background-color:black;" onclick=RedirectToPage("Home.html")>Home</button>
+
+<button style="color:red;background-color:yellow;" onclick=RedirectToPage("About.html")>About us</button>
+
+  <button style="color:blue;background-color:Orange;" onclick=RedirectToPage("Contactus.html")>Contact us</button>
+
+<br>
+<br><br>
+<br>
+<br><br><br><br><br><br><br><br><br><br>
+<h2 style=color:blue>Give Your Feedback here!</h2>
+<textarea name="" rows="8" cols="80" id="textarea1"></textarea>
+<br>
+<button style="color:Blue;background-color:red" onclick="myfunction()">Submit</button>
+
+
+<p style="color:Red;" id="errorMessage"></p>
+</body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="/css/master.css">
+<script src="validation.js"></script>
+<script>
+ function myfunction(abc) {
+
+ var txt1Val= document.getElementById("txt1").value;
+ var txt2Val= document.getElementById("txt2").value;
+ var txt3Val= document.getElementById("txt3").value;
+ var txt4Val= document.getElementById("txt4").value;
+
+ if(txt1Val=='' ||txt2Val==''||txt3Val==''||txt4Val=='')
+ {
+ document.getElementById("errorMessage").innerHTML = "Textbox cannot be blank...."
+  document.getElementById("errorMessage").style.color="red";
+ }
+ else {
+   window.location.href = abc
+   }
+ }
+
+
+
+
+
+ </script>
+
+
+
+
+
+    <meta charset="utf-8">
+    <style>
+    a:link {
+      color: red;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: blue;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: ;
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <button style=color:blue;background-color:red onclick=RedirectToPage("Dash.html")>Dashboard</button>
+    <br><br>
+    <button   style=color:blue;background-color:green onclick=RedirectToPage("Report.html")>Report Card</button>
+    <br><br>
+    <button style=color:red;background-color:grey onclick=RedirectToPage("Payment.html")>Pay Fees</button>
+
+
+
+
+
+
+
+
+
+
+      <br><br>
+
+    <br><br>
+        Homework
+        <br><br>
+      2+2 = <input type="number" id="txt1" type="text" name="Name" size="20">
+      <br><br>
+      9-9 = <input type="number" id="txt2" type="text" name="Name" size="20">
+      <br><br>
+      3+3 = <input type="number" id="txt3" type="text" name="Name" size="20">
+      <br><br>
+      6+6 = <input type="number" id="txt4" type="text" name="Name" size="20">
+    <br><br>
+    <button style=color:red;background-color:blue;Width:70px;height:30px onclick=myfunction("Code.html")>Submit</button>
+     <!-- <button style=color:blue;background-color:yellow;Width:80px;height:40px onclick=RedirectToPage("Sample.html")>Teacher's Feedback</button> -->
+
+
+
+    <br>
+    <p id="errorMessage"></p>
+
+    <body style="background-color:orange">
+
+  </body>
+
+
+  <br>
+  <br>
+  <br>
+
+
+</html>

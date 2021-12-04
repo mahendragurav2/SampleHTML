@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>	::: BetweenUs ::: </title>
+<head>
+<script>
+  function openSchool()
+  {
+  var userNameVal= document.getElementById("txtusername").value;
+  var passwordVal= document.getElementById("txtpassword").value;
+  if(userNameVal=='' && passwordVal=='')
+  {
+
+    document.getElementById("errorMessage").innerHTML = "Username and Password cannot be blank"
+
+  }
+
+
+
+  if(userNameVal=='')
+
+  {
+    document.getElementById("errorMessage").innerHTML = "Username cannot be blank...."
+  }
+  else if (passwordVal=='') {
+    document.getElementById("errorMessage").innerHTML = "Password cannot be blank...."
+  }
+  else {
+      window.location.href='Dash.html';
+  }
+
+
+  }
+  </script>
+</head>
+<body style="background-Color:lightblue">
+  <h2 style="color:red">Welcome to Betweenus!</h2>
+<br>
+<br>
+
+
+<h2 style=color:green>Login to your account</h2>
+<br><br>
+
+<input style="width:200px;color:blue" id="txtusername" placeholder="Username">
+<br>
+<br>
+
+<input style="width:200px;color:green" id="txtpassword" type="password" placeholder="Password">
+<br><br>
+
+<p style=color:red; id="errorMessage"></p>
+
+
+<button style=color:white;background-color:red onclick="openSchool()">Login</button>
+</body>
