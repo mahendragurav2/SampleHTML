@@ -2,31 +2,68 @@
 <html>
 <title>	::: BetweenUs ::: </title>
 <head>
+
+  <xml ID="empXML"
+src="Employee.xml"></xml>
 <script>
-  function openSchool()
-  {
+
+
+
+function login(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.getElementsByTagName("users");
+  alert(x.length)
   var userNameVal= document.getElementById("txtusername").value;
   var passwordVal= document.getElementById("txtpassword").value;
-  if(userNameVal=='' && passwordVal=='')
+
+    for (i = 0; i < x.length; i++) {
+    var username =x[i].getElementsByTagName("username")[0].childNodes[0].nodeValue;
+    var password =x[i].getElementsByTagName("password")[0].childNodes[0].nodeValue;
+    if(userNameVal==username&&passwordVal==password)
+    {
+        window.location.href='Dash.html';
+    }else {
+        document.getElementById("errorMessage").innerHTML="Username or Password is incorrect"
+    }
+    }
+
+}
+  function openSchool()
   {
 
-    document.getElementById("errorMessage").innerHTML = "Username and Password cannot be blank"
 
-  }
+    var userNameVal= document.getElementById("txtusername").value;
+    var passwordVal= document.getElementById("txtpassword").value;
 
 
+    if(userNameVal=='')
+{
 
-  if(userNameVal=='')
+      document.getElementById("errorMessage").innerHTML = "Username cannot be blank...."
+      return false;
+    }
+    else if (passwordVal=='') {
+      document.getElementById("errorMessage").innerHTML = "Password cannot be blank...."
+      return false;
+    }
 
-  {
-    document.getElementById("errorMessage").innerHTML = "Username cannot be blank...."
-  }
-  else if (passwordVal=='') {
-    document.getElementById("errorMessage").innerHTML = "Password cannot be blank...."
-  }
-  else {
-      window.location.href='Dash.html';
-  }
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+
+        // Request finished and response
+        // is ready and Status is "OK"
+        if (this.readyState == 4 && this.status == 200) {
+            login(this);
+        }
+    };
+
+    // employee.xml is the external xml file
+    xmlhttp.open("GET", "logindata.xml", true);
+    xmlhttp.send();
+
+
 
 
   }
@@ -36,7 +73,6 @@
   <h2 style="color:red">Welcome to Betweenus!</h2>
 <br>
 <br>
-
 
 <h2 style=color:green>Login to your account</h2>
 <br><br>
@@ -51,5 +87,5 @@
 <p style=color:red; id="errorMessage"></p>
 
 
-<button style=color:white;background-color:red onclick="openSchool()">Login</button>
+<button style="color:white;background-color:red" onclick="openSchool()">Login</button>
 </body>

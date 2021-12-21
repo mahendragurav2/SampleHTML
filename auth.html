@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function myfunction() {
+var value1=document.getElementById("value1").value;
+var value2=document.getElementById("value2").value;
+if(value1==''&& value2=='')
+var product=value1*value2;
+
+document.getElementById("finalresult").innerHTML = product;
+}
+
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+<input name="text1" id="value1"></input>
+<br><br>
+<input name="text2" id="value2"></input>
+<br><br>
+
+<button onclick="myfunction()">Multiply</button>
+
+
+
+<p id="finalresult"></p>
+
+
+
+
+
+
+
+</body>
+</html>
