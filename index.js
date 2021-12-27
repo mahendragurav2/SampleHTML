@@ -1,2 +1,4 @@
-function myfunction() {
-}
+function myfunction(abc)    {
+    window.location.href = abc
+        }
+    
