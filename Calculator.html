@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function Calculator(number){
+
+var value1=Number(document.getElementById('value1').value);
+var value2=Number(document.getElementById('value2').value);
+
+switch(number){
+
+case '+':
+
+document.getElementById('result').innerHTML = value1 + value2;
+break;
+case '-':
+
+document.getElementById('result').innerHTML = value1 - value2;
+break;
+case '*':
+
+document.getElementById('result').innerHTML = value1 * value2;
+break;
+case '/':
+
+document.getElementById('result').innerHTML = value1 / value2;
+break;
+}
+
+
+
+}
+
+
+</script>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+    <input placeholder="value1" type="number" name="" id="value1"></input>
+    <br><br>
+    <input placeholder="value2" type="number" id="value2"></input>
+    <br><br>
+    <button style="color:blue;background-color: darkorange;" onclick="Calculator('+')">Add</button>
+    <button style="color:blue;background-color: darkorange;" onclick="Calculator('-')">Subtract</button>
+    <button style="color:blue;background-color: darkorange;" onclick="Calculator('*')">Multiply</button>
+    <button style="color:blue;background-color: darkorange;" onclick="Calculator('/')">Divide</button>
+
+    <p id="result"></p>
+</body>
+
+</html>

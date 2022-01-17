@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+        function Calculator(op) {
+
+
+            var value1 = Number(document.getElementById('addValue1').value);
+            var value2 = Number(document.getElementById('addValue2').value);
+
+            switch (op) {
+                case '+':
+                    document.getElementById('calcResult').innerHTML = value1 + value2;
+                    break;
+                    case '-':
+                    document.getElementById('calcResult').innerHTML = value1 - value2;
+                    break;
+                    case '*':
+                    document.getElementById('calcResult').innerHTML = value1 * value2;
+                    break;
+                    case '/':
+                    document.getElementById('calcResult').innerHTML = value1 / value2;
+                    break;
+                    
+
+
+
+            }
+
+
+
+
+        }
+
+        function multiply(){
+
+            var value1 = Number(document.getElementById('addValue1').value);
+            var value2 = Number(document.getElementById('addValue2').value);
+
+            document.getElementById('calcResult').innerHTML = value1 * value2;
+
+
+
+
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Calculator</h1>
+   <input placeholder="value1" type="number" id="addValue1" name="addValue1"></input>
+    <br><br>
+    <input placeholder="value2" type="number" id="addValue2"></input>
+    <br><br>
+    <button style="background-color:blue;color: floralwhite;" onclick="Calculator('+')">Add</button>
+    <button style="background-color:blue;color: floralwhite;" onclick="Calculator('-')">Subtract</button>
+    <button style="background-color:blue;color: floralwhite;" onclick="multiply()">Multiply</button>
+    <button style="background-color:blue;color: floralwhite;" onclick="Calculator('/')">Divide</button>
+
+    <label for="addValue1">value1 :</label> 
+
+    <p id="calcResult"></p>
+
+
+</body>
+
+</html>

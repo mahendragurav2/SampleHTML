@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  
+
+  <body>
+
+    <div id="canvas"></div>
+    <body onload="startGame()">/>
+<head>
+  <head>
+    <style>
+      canvas {
+      
+      border:2px solid black;
+      background-color:#87ceeb;
+      }
+    </style>
+
+      <script>
+        var canvasWidth=600;
+        var canvasHeight=400;
+
+        function startGame(){
+
+          gamecanvas.start();
+        }
+        var gameCanvas= {
+
+          canavs:document.createElement('canvas'),
+          start: function(){
+            this.canavs.width=canvasWidth;
+            this.canvas.height=canvasHeight;
+            this.context=this.canvas.get.context('2d');
+            document.body.insertBefore(this.canvas,document.body.childNodes[0]);
+
+
+
+          }
+      
+        }
+        var player;
+        var playerYPosition =200;
+
+        function startGame(){
+
+          gameCanvas.start();
+          player=new createPlayer(30,30,10);
+        }
+        function createPlayer(width,height,x){
+
+          this.width=width;
+          this.height=height;
+          this.x=x;
+          this.y=playerYPosition;
+
+          ctx=gameCanvas.context;
+          ctx.fillStyle="green";
+          ctx.fillRect(this.x,this.y,this.width,this.height);
+
+
+        }
+
+        </script>
+      
+      
+  </head>
+</head>
+      
+
+          
+      
+    
+
+  </body>
+
+
+</body>
+</html>
