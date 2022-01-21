@@ -4,13 +4,40 @@
 <head>
 
 
-  <meta charset="utf-8">
 
+  <link rel="stylesheet" href="/css/master.css">
   <script>
 
-    function myfunction(abc) {
+    function myfunction(abc, btnName) {
 
-      window.location.href = abc
+      if (btnName == 'submit') {
+        var txt1 = document.getElementById('txt1').value;
+        if (txt1 == '') {
+
+          document.getElementById("errorMessage").innerHTML = "The textbox cannot be blank"
+          document.getElementById("errorMessage").style.color = "red"
+
+        }
+
+        else {
+
+
+          window.location.href = abc
+        }
+        
+      }
+      else{
+
+        window.location.href = abc
+      }
+    }
+
+
+    function RedirectToPage(Redirect) {
+
+
+      window.location.href = Redirect
+
     }
 
   </script>
@@ -36,17 +63,13 @@
       background-color: transparent;
       text-decoration: underline;
     }
-
-    a:active {
-      color: yellow;
-      background-color:
-        text-decoration;
-      underline:
-    }
   </style>
 
   <br><br>
-  <input type="text" name="Name" size="20">
+  <input id="txt1" type="text" name="Name" size="20">
+  <br><br>
+  <p id="errorMessage"></p>
+  <button style=color:green;background-color:white onclick="myfunction('pghtml.html','submit')">Submit</button>
   <br><br>
 
 </head>
@@ -54,13 +77,13 @@
 <body>
 
   <body style="background-color:orange">
-    <button style=color:blue;background-color:red onclick="myfunction('Dash.html')">Dashboard</button>
+    <button style=color:blue;background-color:red onclick="myfunction('Dash.html','Dash')">Dashboard</button>
     <br><br>
-    <button style=color:red;background-color:yellow onclick="myfunction('Student.html')">Student Resources</button>
+    <button style=color:red;background-color:yellow onclick="RedirectToPage('Student.html')">Student Resources</button>
     <br><br>
-    <button style=color:blue;background-color:green onclick="myfunction('Report.html')">Report Card</button>
+    <button style=color:blue;background-color:green onclick="RedirectToPage('Report.html')">Report Card</button>
     <br><br>
-    <button style="color:white;background-color:blue;" onclick="myfunction('calender.html')">Calender</button>
+    <button style="color:white;background-color:blue;" onclick="RedirectToPage('calender.html')">Calender</button>
 
   </body>
 

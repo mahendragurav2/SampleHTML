@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
+
+
+<body id="colorChange" onload="myFunction()">
+
+
+
+</body>
+
 <head>
 
     <script>
 
-function img(){
+  
+        function myFunction(){
+            document.addEventListener('click',changeColor,true)
+  
+         
+        
+  
+        }
+  function changeColor(){
+ document.getElementById('colorChange').style.background="blue" 
 
-window.location.href="dot.html";
-
-
-}
-
-
+  }
+      
     </script>
-
-</head>
-
-<body>
-
-<h1 onclick="img()">hello!</h1>
-
-</body>
+  
+  </head>
 
 </html>

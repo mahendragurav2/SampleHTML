@@ -3,13 +3,13 @@
 <head>
 
 <script>
-function myfunction() {
-var value1=document.getElementById("value1").value;
-var value2=document.getElementById("value2").value;
-if(value1==''&& value2=='')
-var product=value1*value2;
 
-document.getElementById("finalresult").innerHTML = product;
+function RedirectToPage(Redirect){
+
+
+window.location.href= Redirect;
+
+
 }
 
 
@@ -25,22 +25,13 @@ document.getElementById("finalresult").innerHTML = product;
 
 
 
-<input name="text1" id="value1"></input>
-<br><br>
-<input name="text2" id="value2"></input>
-<br><br>
-
-<button onclick="myfunction()">Multiply</button>
 
 
-
-<p id="finalresult"></p>
-
-
-
-
-
-
+<img style="width: 100px;" src="Image.GIF" onclick="RedirectToPage('Dash.html')"></img> 
+<h2>Atharva Gurav   </h2>
+<br>
+<img style="width: 100px;" src="image html.GIF" onclick="RedirectToPage('Dash2.html')"></img>
+<h2>Varad Gurav   </h2>
 
 </body>
 </html>

@@ -10,10 +10,11 @@ src="Employee.xml"></xml>
 
 
 function login(xml) {
+
   var i;
   var xmlDoc = xml.responseXML;
   var x = xmlDoc.getElementsByTagName("users");
-  alert(x.length)
+alert('hh')
   var userNameVal= document.getElementById("txtusername").value;
   var passwordVal= document.getElementById("txtpassword").value;
 
@@ -22,7 +23,9 @@ function login(xml) {
     var password =x[i].getElementsByTagName("password")[0].childNodes[0].nodeValue;
     if(userNameVal==username&&passwordVal==password)
     {
-        window.location.href='Dash.html';
+   
+        window.location.href='auth.html';
+       
     }else {
         document.getElementById("errorMessage").innerHTML="Username or Password is incorrect"
     }
@@ -36,16 +39,23 @@ function login(xml) {
     var userNameVal= document.getElementById("txtusername").value;
     var passwordVal= document.getElementById("txtpassword").value;
 
+    if(userNameVal==''&&passwordVal==''){
+
+document.getElementById("errorMessage").innerHTML="Username and Password cannot be blank...."
+return false; 
+    }
 
     if(userNameVal=='')
 {
 
       document.getElementById("errorMessage").innerHTML = "Username cannot be blank...."
       return false;
+     
     }
-    else if (passwordVal=='') {
+     if (passwordVal=='') {
       document.getElementById("errorMessage").innerHTML = "Password cannot be blank...."
       return false;
+     
     }
 
 
@@ -56,15 +66,21 @@ function login(xml) {
         // is ready and Status is "OK"
         if (this.readyState == 4 && this.status == 200) {
             login(this);
+            ///window.location.href= abc 
         }
     };
 
     // employee.xml is the external xml file
     xmlhttp.open("GET", "logindata.xml", true);
     xmlhttp.send();
+   
+
+function RedirectToPage(abc){
 
 
 
+
+}
 
   }
   </script>
@@ -86,7 +102,7 @@ background-image:url();
   </style>
 </head>
 <body style="background-Color:lightblue">
-  <h2 style="color:red">Welcome to Betweenus!</h2>
+  <h2 style="color:red">Welcome to Varad Atharva School !</h2>
 <br>
 <br>
 
