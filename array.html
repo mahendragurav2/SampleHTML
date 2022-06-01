@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+    function displayCity(){
+
+        var city=['Pune','Mumbai','Nagpur','Nashik'];
+           
+           for(var i=0;i<city.length;i++)
+           {
+           document.getElementById('array1').innerHTML=document.getElementById('array1').innerHTML+' '+city[i]
+           }
+
+    }
+           
+        </script>
+    </head>
+    <body onload="displayCity()">
+
+        <p id="array1"></p>
+    </body>
+</html>

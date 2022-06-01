@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function txtLabel(){
+
+                document.getElementById("p1").innerHTML=document.getElementById("txt1").value;
+            }
+        </script>
+    </head>
+    <body>
+        <input id="txt1" onkeypress="txtLabel()"></input>
+        
+<button onclick="txtLabel()">Display</button>
+
+<p id="p1"></p>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function buttonChange() {
+            var btnText = document.getElementById("btn1").innerHTML
+
+            if (btnText == 'Yes') {
+                document.getElementById("btn1").innerHTML = "No"
+            }
+            else {
+                document.getElementById("btn1").innerHTML = "Yes"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="buttonChange()" id="btn1">Yes</button>
+</body>
+
+</html>
